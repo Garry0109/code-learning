@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "blank": "B",
+  "raw": {
+    "Q_raw": "qAccept\nqReject\nq0\nq1\nqOdd\nqEven\nqWOdd\nqWdd\nqWd\nqWEven\nqWven\nqWen\nqWn",
+    "delta_raw": "# 例子：把 0/1 串向右扫描到 B 后接受\nq0 0 q0 0 R\nq0 1 q1 1 R\nq1 0 q1 0 R\nq1 1 q0 1 R\nq0 B qEven B L\nq1 B qOdd B L\nqOdd 0 qOdd B L\nqOdd 1 qOdd B L\nqEven 0 qEven B L\nqEven 1 qEven B L\nqOdd B qWOdd B R\nqWOdd B qWdd O R\nqWdd B qWd d R\nqWd B qAccept d R\nqEven B qWEven B R\nqWEven B qWven E R\nqWven B qWen v R\nqWen B qWn e R\nqWn B qAccept n R",
+    "q0": "q0",
+    "qAccept": "qAccept",
+    "qReject": "qReject",
+    "tapeInit": "101101"
+  },
+  "parse_ok": true,
+  "errors": [],
+  "parsed": {
+    "states": [
+      "qAccept",
+      "qReject",
+      "q0",
+      "q1",
+      "qOdd",
+      "qEven",
+      "qWOdd",
+      "qWdd",
+      "qWd",
+      "qWEven",
+      "qWven",
+      "qWen",
+      "qWn"
+    ],
+    "q0": "q0",
+    "qAccept": "qAccept",
+    "qReject": "qReject",
+    "transitions": [
+      {
+        "cur": "q0",
+        "read": "0",
+        "next": "q0",
+        "write": "0",
+        "move": "R",
+        "line": 2,
+        "raw": "q0 0 q0 0 R"
+      },
+      {
+        "cur": "q0",
+        "read": "1",
+        "next": "q1",
+        "write": "1",
+        "move": "R",
+        "line": 3,
+        "raw": "q0 1 q1 1 R"
+      },
+      {
+        "cur": "q1",
+        "read": "0",
+        "next": "q1",
+        "write": "0",
+        "move": "R",
+        "line": 4,
+        "raw": "q1 0 q1 0 R"
+      },
+      {
+        "cur": "q1",
+        "read": "1",
+        "next": "q0",
+        "write": "1",
+        "move": "R",
+        "line": 5,
+        "raw": "q1 1 q0 1 R"
+      },
+      {
+        "cur": "q0",
+        "read": "B",
+        "next": "qEven",
+        "write": "B",
+        "move": "L",
+        "line": 6,
+        "raw": "q0 B qEven B L"
+      },
+      {
+        "cur": "q1",
+        "read": "B",
+        "next": "qOdd",
+        "write": "B",
+        "move": "L",
+        "line": 7,
+        "raw": "q1 B qOdd B L"
+      },
+      {
+        "cur": "qOdd",
+        "read": "0",
+        "next": "qOdd",
+        "write": "B",
+        "move": "L",
+        "line": 8,
+        "raw": "qOdd 0 qOdd B L"
+      },
+      {
+        "cur": "qOdd",
+        "read": "1",
+        "next": "qOdd",
+        "write": "B",
+        "move": "L",
+        "line": 9,
+        "raw": "qOdd 1 qOdd B L"
+      },
+      {
+        "cur": "qEven",
+        "read": "0",
+        "next": "qEven",
+        "write": "B",
+        "move": "L",
+        "line": 10,
+        "raw": "qEven 0 qEven B L"
+      },
+      {
+        "cur": "qEven",
+        "read": "1",
+        "next": "qEven",
+        "write": "B",
+        "move": "L",
+        "line": 11,
+        "raw": "qEven 1 qEven B L"
+      },
+      {
+        "cur": "qOdd",
+        "read": "B",
+        "next": "qWOdd",
+        "write": "B",
+        "move": "R",
+        "line": 12,
+        "raw": "qOdd B qWOdd B R"
+      },
+      {
+        "cur": "qWOdd",
+        "read": "B",
+        "next": "qWdd",
+        "write": "O",
+        "move": "R",
+        "line": 13,
+        "raw": "qWOdd B qWdd O R"
+      },
+      {
+        "cur": "qWdd",
+        "read": "B",
+        "next": "qWd",
+        "write": "d",
+        "move": "R",
+        "line": 14,
+        "raw": "qWdd B qWd d R"
+      },
+      {
+        "cur": "qWd",
+        "read": "B",
+        "next": "qAccept",
+        "write": "d",
+        "move": "R",
+        "line": 15,
+        "raw": "qWd B qAccept d R"
+      },
+      {
+        "cur": "qEven",
+        "read": "B",
+        "next": "qWEven",
+        "write": "B",
+        "move": "R",
+        "line": 16,
+        "raw": "qEven B qWEven B R"
+      },
+      {
+        "cur": "qWEven",
+        "read": "B",
+        "next": "qWven",
+        "write": "E",
+        "move": "R",
+        "line": 17,
+        "raw": "qWEven B qWven E R"
+      },
+      {
+        "cur": "qWven",
+        "read": "B",
+        "next": "qWen",
+        "write": "v",
+        "move": "R",
+        "line": 18,
+        "raw": "qWven B qWen v R"
+      },
+      {
+        "cur": "qWen",
+        "read": "B",
+        "next": "qWn",
+        "write": "e",
+        "move": "R",
+        "line": 19,
+        "raw": "qWen B qWn e R"
+      },
+      {
+        "cur": "qWn",
+        "read": "B",
+        "next": "qAccept",
+        "write": "n",
+        "move": "R",
+        "line": 20,
+        "raw": "qWn B qAccept n R"
+      }
+    ]
+  }
+}

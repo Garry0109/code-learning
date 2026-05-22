@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "blank": "B",
+  "raw": {
+    "Q_raw": "q0\nq1\nqM0\nqM1\nqcheck0\nqcheck1\nqback\nqAccept\nqReject\nqWN\nqWY",
+    "delta_raw": "q0 0 qM0 B R\nq0 1 qM1 B R\nqM0 0 qM0 0 R\nqM0 1 qM0 1 R\nqM0 B qcheck0 B L\nqcheck0 0 qback B L\nqcheck0 1 q1 B L\nqcheck0 B qWY B R\nqM1 0 qM1 0 R\nqM1 1 qM1 1 R\nqM1 B qcheck1 B L\nqcheck1 1 qback B L\nqcheck1 0 q1 B L\nqcheck1 B qWY B R\nqback 1 qback 1 L\nqback 0 qback 0 L\nqback B q0 B R\nq1 0 q1 B L\nq1 1 q1 B L\nq1 B qWN B R\nqWN B qAccept N R\nq0 B qWY B R\nqWY B qAccept Y R",
+    "q0": "q0",
+    "qAccept": "qAccept",
+    "qReject": "qReject",
+    "tapeInit": "1010"
+  },
+  "parse_ok": true,
+  "errors": [],
+  "parsed": {
+    "states": [
+      "q0",
+      "q1",
+      "qM0",
+      "qM1",
+      "qcheck0",
+      "qcheck1",
+      "qback",
+      "qAccept",
+      "qReject",
+      "qWN",
+      "qWY"
+    ],
+    "q0": "q0",
+    "qAccept": "qAccept",
+    "qReject": "qReject",
+    "transitions": [
+      {
+        "cur": "q0",
+        "read": "0",
+        "next": "qM0",
+        "write": "B",
+        "move": "R",
+        "line": 1,
+        "raw": "q0 0 qM0 B R"
+      },
+      {
+        "cur": "q0",
+        "read": "1",
+        "next": "qM1",
+        "write": "B",
+        "move": "R",
+        "line": 2,
+        "raw": "q0 1 qM1 B R"
+      },
+      {
+        "cur": "qM0",
+        "read": "0",
+        "next": "qM0",
+        "write": "0",
+        "move": "R",
+        "line": 3,
+        "raw": "qM0 0 qM0 0 R"
+      },
+      {
+        "cur": "qM0",
+        "read": "1",
+        "next": "qM0",
+        "write": "1",
+        "move": "R",
+        "line": 4,
+        "raw": "qM0 1 qM0 1 R"
+      },
+      {
+        "cur": "qM0",
+        "read": "B",
+        "next": "qcheck0",
+        "write": "B",
+        "move": "L",
+        "line": 5,
+        "raw": "qM0 B qcheck0 B L"
+      },
+      {
+        "cur": "qcheck0",
+        "read": "0",
+        "next": "qback",
+        "write": "B",
+        "move": "L",
+        "line": 6,
+        "raw": "qcheck0 0 qback B L"
+      },
+      {
+        "cur": "qcheck0",
+        "read": "1",
+        "next": "q1",
+        "write": "B",
+        "move": "L",
+        "line": 7,
+        "raw": "qcheck0 1 q1 B L"
+      },
+      {
+        "cur": "qcheck0",
+        "read": "B",
+        "next": "qWY",
+        "write": "B",
+        "move": "R",
+        "line": 8,
+        "raw": "qcheck0 B qWY B R"
+      },
+      {
+        "cur": "qM1",
+        "read": "0",
+        "next": "qM1",
+        "write": "0",
+        "move": "R",
+        "line": 9,
+        "raw": "qM1 0 qM1 0 R"
+      },
+      {
+        "cur": "qM1",
+        "read": "1",
+        "next": "qM1",
+        "write": "1",
+        "move": "R",
+        "line": 10,
+        "raw": "qM1 1 qM1 1 R"
+      },
+      {
+        "cur": "qM1",
+        "read": "B",
+        "next": "qcheck1",
+        "write": "B",
+        "move": "L",
+        "line": 11,
+        "raw": "qM1 B qcheck1 B L"
+      },
+      {
+        "cur": "qcheck1",
+        "read": "1",
+        "next": "qback",
+        "write": "B",
+        "move": "L",
+        "line": 12,
+        "raw": "qcheck1 1 qback B L"
+      },
+      {
+        "cur": "qcheck1",
+        "read": "0",
+        "next": "q1",
+        "write": "B",
+        "move": "L",
+        "line": 13,
+        "raw": "qcheck1 0 q1 B L"
+      },
+      {
+        "cur": "qcheck1",
+        "read": "B",
+        "next": "qWY",
+        "write": "B",
+        "move": "R",
+        "line": 14,
+        "raw": "qcheck1 B qWY B R"
+      },
+      {
+        "cur": "qback",
+        "read": "1",
+        "next": "qback",
+        "write": "1",
+        "move": "L",
+        "line": 15,
+        "raw": "qback 1 qback 1 L"
+      },
+      {
+        "cur": "qback",
+        "read": "0",
+        "next": "qback",
+        "write": "0",
+        "move": "L",
+        "line": 16,
+        "raw": "qback 0 qback 0 L"
+      },
+      {
+        "cur": "qback",
+        "read": "B",
+        "next": "q0",
+        "write": "B",
+        "move": "R",
+        "line": 17,
+        "raw": "qback B q0 B R"
+      },
+      {
+        "cur": "q1",
+        "read": "0",
+        "next": "q1",
+        "write": "B",
+        "move": "L",
+        "line": 18,
+        "raw": "q1 0 q1 B L"
+      },
+      {
+        "cur": "q1",
+        "read": "1",
+        "next": "q1",
+        "write": "B",
+        "move": "L",
+        "line": 19,
+        "raw": "q1 1 q1 B L"
+      },
+      {
+        "cur": "q1",
+        "read": "B",
+        "next": "qWN",
+        "write": "B",
+        "move": "R",
+        "line": 20,
+        "raw": "q1 B qWN B R"
+      },
+      {
+        "cur": "qWN",
+        "read": "B",
+        "next": "qAccept",
+        "write": "N",
+        "move": "R",
+        "line": 21,
+        "raw": "qWN B qAccept N R"
+      },
+      {
+        "cur": "q0",
+        "read": "B",
+        "next": "qWY",
+        "write": "B",
+        "move": "R",
+        "line": 22,
+        "raw": "q0 B qWY B R"
+      },
+      {
+        "cur": "qWY",
+        "read": "B",
+        "next": "qAccept",
+        "write": "Y",
+        "move": "R",
+        "line": 23,
+        "raw": "qWY B qAccept Y R"
+      }
+    ]
+  }
+}
