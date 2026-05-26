@@ -28,7 +28,7 @@ def extract_logic(img_data):
     extracted_bytes = bytearray()
     for i in range(text_len):
         offset=82+64*STRIDE+i*8*STRIDE
-        extracted_bytes[i]=modify(img_data,offset,8)
+        extracted_bytes.append(modify(img_data,offset,8))
 
 
 
